@@ -30,7 +30,14 @@ console.log(longNames)
 
 // 3. Rimuovi 'Ed' dall'array teachers
  // da contrtollare //
-teachers.toSpliced(1,1)
+ for (let i = 0; i < teachers.length; i++){
+  if( teachers[i] === 'ed'){
+    teachers.splice(1,i)
+  }
+}
+
+
+teachers.splice(1,1)
 console.log(teachers)
 
 
@@ -38,8 +45,6 @@ console.log(teachers)
 // e salva il risultato nella variabile isFabioPresent
 
 let isFabioPresent = null;
-
-let lewisIndex = null;
 
 for (let i = 0; i < teachers.length; i++){
   if( teachers[i] === 'Fabio'){
